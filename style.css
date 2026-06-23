@@ -8,7 +8,7 @@
 
 body {
   /* 1. Link da sua imagem (substitua pelo caminho correto da sua imagem no GitHub) */
-  background-image: url('assets/seu-background.jpg');
+  background-image: url('assets/Background_front.png');
 
   /* 2. Fixa o fundo na tela do celular */
   background-attachment: fixed;
