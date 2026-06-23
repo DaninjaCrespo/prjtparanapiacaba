@@ -1,139 +1,24 @@
-/* Configurações Gerais */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
+/* Torna os cards clicáveis na página inicial */
+.card-link {
+  text-decoration: none;
+  display: block;
+  transition: transform 0.2s ease;
 }
 
-body {
-  /* 1. Link da sua imagem (substitua pelo caminho correto da sua imagem no GitHub) */
-  background-image: url('assets/Background_front.png');
-
-  /* 2. Fixa o fundo na tela do celular */
-  background-attachment: fixed;
-
-  /* 3. Garante que a imagem cubra a tela inteira sem distorcer */
-  background-size: cover;
-
-  /* 4. Centraliza a imagem na tela */
-  background-position: center center;
-
-  /* 5. Impede que a imagem se repita */
-  background-repeat: no-repeat;
-
-  color: #ffffff;
-  padding: 20px;
-  line-height: 1.6;
+.card-link:hover {
+  transform: scale(1.02); /* Dá um leve zoom quando passa o mouse/dedo */
 }
 
-/* Container Principal para limitar a largura no celular */
-.container {
-  max-width: 500px;
-  margin: 0 auto;
-  padding-bottom: 40px;
-}
-
-/* Títulos Principais */
-.titulo-principal {
-  color: #e6b800; /* Tom de dourado/amarelo que você usou */
-  text-align: center;
-  font-size: 2.2rem;
-  text-transform: uppercase;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  letter-spacing: 2px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-}
-
-.subtitulo {
-  font-style: italic;
-  text-align: center;
-  font-size: 1.1rem;
-  color: #cccccc;
-  margin-bottom: 40px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
-}
-
-.secao-titulo {
+/* Botão voltar para usar nas subpáginas */
+.botao-voltar {
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 20px;
   color: #e6b800;
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-  border-bottom: 1px solid rgba(230, 184, 0, 0.3);
-  padding-bottom: 5px;
-}
-
-/* Cards dos Formatos de Jogo (Modos) */
-.card-modo {
-  background: rgba(20, 20, 20, 0.85); /* Fundo escuro transparente para dar legibilidade */
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-}
-
-.card-modo h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: #ffffff;
-}
-
-.card-modo p {
-  color: #dddddd;
-  font-size: 0.95rem;
-}
-
-/* Seção de Iniciar Caso / Validação do Pix */
-.secao-iniciar {
-  background: rgba(20, 20, 20, 0.9);
-  border: 2px solid #e6b800;
-  border-radius: 8px;
-  padding: 25px;
-  text-align: center;
-  margin-top: 40px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
-}
-
-.input-codigo {
-  width: 100%;
-  padding: 12px;
-  background: #111111;
-  border: 1px solid #444444;
-  color: #ffffff;
-  border-radius: 4px;
-  font-size: 1.1rem;
-  text-align: center;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-}
-
-.input-codigo:focus {
-  border-color: #e6b800;
-  outline: none;
-}
-
-.botao-enviar {
-  width: 100%;
-  padding: 14px;
-  background: #e6b800;
-  color: #000000;
-  border: none;
-  border-radius: 4px;
+  text-decoration: none;
   font-weight: bold;
-  font-size: 1.1rem;
-  cursor: pointer;
-  text-transform: uppercase;
-  transition: background 0.3s ease;
-}
-
-.botao-enviar:hover {
-  background: #ffcc00;
-}
-
-.mensagem-erro {
-  color: #ff4d4d;
   font-size: 0.9rem;
-  margin-top: 15px;
-  font-weight: bold;
+}
+.botao-voltar:hover {
+  text-decoration: underline;
 }
