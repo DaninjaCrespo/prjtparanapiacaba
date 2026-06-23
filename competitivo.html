@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modo Competitivo - Mistérios da Névoa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <a href="index.html" class="botao-voltar">← Voltar aos Formatos</a>
+    
+    <h1 class="titulo-principal">Modo Competitivo</h1>
+    <p class="subtitulo">Dividam-se em equipes. Quem dominar mais pontos turísticos vence a corrida.</p>
+
+    <h2 class="secao-titulo">Tabuleiros Vivos</h2>
+
+    <div class="card-modo">
+      <h3>🚂 Caso 1: O Trem Fantasma dos Ingleses</h3>
+      <p>Um trem carregado de ouro sumiu nos trilhos da serra em 1890. Corram contra as outras equipes pelas ruas de terra para encontrar os vagões virtuais. Quem errar a charada local cai na "Prisão da Estação" e fica retido por 2 minutos!</p>
+    </div>
+
+    <div class="card-modo">
+      <h3>🩸 Caso 2: O Assassino da Vila</h3>
+      <p>Um crime fictício movimenta a noite de Paranapiacaba. Cada equipe assume o papel de uma delegacia diferente. Avancem casas decifrando enigmas nos monumentos e tentem capturar o suspeito antes dos seus amigos.</p>
+    </div>
+
+    <div class="card-modo">
+      <h3>👰 Caso 3: A Noiva do Véu da Névoa</h3>
+      <p>A névoa esconde o caminho da noiva perdida. Neste jogo de tabuleiro geográfico, usem seus celulares para sabotar as equipes adversárias e chegar primeiro ao topo do Castelinho.</p>
+    </div>
+
+    <div class="secao-iniciar">
+      <h2 class="secao-titulo" style="border: none; margin-bottom: 10px;">Iniciar Competição</h2>
+      <input type="text" id="codigoAcesso" class="input-codigo" placeholder="Digite o código da sala multiplayer" value="TESTE">
+      <button class="botao-enviar" onclick="verificarCodigo()">Entrar na Sala</button>
+      <p id="mensagemStatus" class="mensagem-erro">Insira o código gerado pelo balcão parceiro.</p>
+    </div>
+
+  </div>
+
+  <script>
+    function verificarCodigo() {
+      const codigo = document.getElementById('codigoAcesso').value.trim().toUpperCase();
+      const status = document.getElementById('mensagemStatus');
+      if (codigo === 'TESTE') {
+        status.style.color = '#4df0ff';
+        status.innerText = 'Conectando à Sala Multiplayer... Aguardando outros jogadores.';
+      } else {
+        status.style.color = '#ff4d4d';
+        status.innerText = 'Sala não encontrada. Verifique o código.';
+      }
+    }
+  </script>
+</body>
+</html>
