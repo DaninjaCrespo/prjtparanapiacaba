@@ -9,49 +9,29 @@
 <body>
 
   <div class="container">
-    <a href="index.html" class="botao-voltar">← Voltar aos Formatos</a>
-    
     <h1 class="titulo-principal">Modo Detetive</h1>
-    <p class="subtitulo">O relógio está correndo. Resolva o mistério antes que o tempo esgote.</p>
+    <p class="subtitulo">O relógio é seu maior inimigo. Falhe na dedução e o caso será selado como insolúvel para sempre.</p>
 
-    <h2 class="secao-titulo">Missões Críticas (60 minutos)</h2>
+    <h2 class="secao-titulo">Arquivos Confidenciais</h2>
 
-    <div class="card-modo">
-      <h3>🔧 Caso 1: O Enigma do Engenheiro Charles</h3>
-      <p>O engenheiro-chefe deixou uma bomba lógica no sistema de freios dos trens da serra. Você tem exatamente 1 hora para inspecionar os parafusos, placas e engrenagens reais da oficina mecânica e desativar o sistema no aplicativo.</p>
-    </div>
+    <a href="#" class="link-caso">
+      <h3>🩸 Arquivo 1: Sangue no Castelinho</h3>
+      <p>O engenheiro-chefe foi encontrado sem vida em seu escritório. Vocês têm exatos 60 minutos para interrogar a vila e apontar a arma do crime.</p>
+    </a>
 
-    <div class="card-modo">
-      <h3>🕰️ Caso 2: O Roubo do Relógio da Estação</h3>
-      <p>O famoso relógio estilo Big Ben parou misteriosamente. Uma relíquia interna foi roubada. Interrogue os suspeitos digitais nas coordenadas corretas via GPS e encontre o culpado antes que a névoa cubra os rastros para sempre.</p>
-    </div>
+    <a href="#" class="link-caso">
+      <h3>⚙️ Arquivo 2: O Relógio Envenenado</h3>
+      <p>Um mecanismo letal foi ativado na torre. Vasculhe engrenagens pela vila para descobrir a senha de desativação antes que o tempo zere.</p>
+    </a>
 
-    <div class="card-modo">
-      <h3>🏰 Caso 3: A Maldição do Castelinho</h3>
-      <p>A antiga casa do engenheiro está trancada por enigmas matemáticos cruéis baseados nas suas janelas e colunas. Chegue até a entrada principal e desvende o quebra-cabeça final sob a pressão implacável do cronômetro.</p>
-    </div>
+    <a href="#" class="link-caso">
+      <h3>👁️ Arquivo 3: O Enigma da Maçonaria</h3>
+      <p>Símbolos ocultos apareceram no mercado antigo. Decifre a charada da sociedade secreta em 90 minutos antes que as provas sejam apagadas.</p>
+    </a>
 
-    <div class="secao-iniciar">
-      <h2 class="secao-titulo" style="border: none; margin-bottom: 10px;">Ativar Cronômetro</h2>
-      <input type="text" id="codigoAcesso" class="input-codigo" placeholder="Digite seu código de ativação" value="TESTE">
-      <button class="botao-enviar" onclick="verificarCodigo()">Iniciar Contagem Regressiva</button>
-      <p id="mensagemStatus" class="mensagem-erro">Atenção: O tempo começará a rodar imediatamente após a validação.</p>
-    </div>
+    <a href="index.html" class="botao-voltar">← Voltar para os Formatos</a>
 
   </div>
 
-  <script>
-    function verificarCodigo() {
-      const codigo = document.getElementById('codigoAcesso').value.trim().toUpperCase();
-      const status = document.getElementById('mensagemStatus');
-      if (codigo === 'TESTE') {
-        status.style.color = '#4df0ff';
-        status.innerText = 'Código Detetive Aceito! Cronômetro iniciado: 60:00... BOA SORTE!';
-      } else {
-        status.style.color = '#ff4d4d';
-        status.innerText = 'Código inválido ou já expirado.';
-      }
-    }
-  </script>
 </body>
 </html>
