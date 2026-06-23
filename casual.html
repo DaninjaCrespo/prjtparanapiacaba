@@ -9,49 +9,29 @@
 <body>
 
   <div class="container">
-    <a href="index.html" class="botao-voltar">← Voltar aos Formatos</a>
-    
     <h1 class="titulo-principal">Modo Casual</h1>
     <p class="subtitulo">Escolha o seu caso e decifre o tabuleiro lógico pelas ruas da vila.</p>
 
     <h2 class="secao-titulo">Casos Disponíveis</h2>
 
-    <div class="card-modo">
-      <h3>🧙‍♀️ Caso 1: A Caça à Bruxa de Paranapiacaba</h3>
-      <p>Uma antiga lenda diz que uma das moradoras do século XIX praticava feitiçaria escondida no nevoeiro. Siga as coordenadas do mapa para coletar os ingredientes rituais perdidos e descubra a verdadeira identidade da bruxa preenchendo a planilha lógica.</p>
-    </div>
+    <a href="caso-bruxa.html" class="link-caso">
+      <h3>🧙‍♀️ Caso 1: A Caça à Bruxa</h3>
+      <p>Uma antiga lenda diz que uma das moradoras do século XIX praticava feitiçaria escondida no nevoeiro.</p>
+    </a>
 
-    <div class="card-modo">
-      <h3>🪦 Caso 2: O Fantasma do Cemitério</h3>
-      <p>Coveiros relatam aparições estranhas na parte alta da vila. Para acalmar a alma do antigo ferroviário, você precisará encontrar os números esquecidos nas lápides e monumentos históricos para fechar o código do Mordoku e libertá-lo.</p>
-    </div>
+    <a href="caso-fantasma.html" class="link-caso">
+      <h3>👻 Caso 2: O Fantasma do Cemitério</h3>
+      <p>Coveiros relatam aparições estranhas. Encontre os números esquecidos nas lápides para libertá-lo.</p>
+    </a>
 
-    <div class="card-modo">
-      <h3>🎩 Caso 3: O Mistério do Barão de Mauá</h3>
-      <p>Um documento secreto sobre a construção da ferrovia foi escondido pelo próprio Barão. Explore a arquitetura inglesa antiga da vila em busca de pistas visuais para abrir o cofre digital do aplicativo.</p>
-    </div>
+    <a href="caso-barao.html" class="link-caso">
+      <h3>🎩 Caso 3: O Mistério do Barão</h3>
+      <p>Um documento secreto sobre a construção da ferrovia foi escondido. Explore a arquitetura inglesa para abrir o cofre.</p>
+    </a>
 
-    <div class="secao-iniciar">
-      <h2 class="secao-titulo" style="border: none; margin-bottom: 10px;">Iniciar Investigação</h2>
-      <input type="text" id="codigoAcesso" class="input-codigo" placeholder="Digite o código da sua prancheta" value="TESTE">
-      <button class="botao-enviar" onclick="verificarCodigo()">Desbloquear Jogo</button>
-      <p id="mensagemStatus" class="mensagem-erro">Insira o código impresso no seu kit físico.</p>
-    </div>
+    <a href="index.html" class="botao-voltar">← Voltar para os Formatos</a>
 
   </div>
 
-  <script>
-    function verificarCodigo() {
-      const codigo = document.getElementById('codigoAcesso').value.trim().toUpperCase();
-      const status = document.getElementById('mensagemStatus');
-      if (codigo === 'TESTE') {
-        status.style.color = '#4df0ff';
-        status.innerText = 'Código Casual Validado! Carregando mapa do jogo...';
-      } else {
-        status.style.color = '#ff4d4d';
-        status.innerText = 'Código inválido para o Modo Casual.';
-      }
-    }
-  </script>
 </body>
 </html>
