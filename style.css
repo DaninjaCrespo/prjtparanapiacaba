@@ -1,24 +1,132 @@
-/* Torna os cards clicáveis na página inicial */
-.card-link {
-  text-decoration: none;
-  display: block;
-  transition: transform 0.2s ease;
+/* Configurações Gerais e Fundo Fixo */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
-.card-link:hover {
-  transform: scale(1.02); /* Dá um leve zoom quando passa o mouse/dedo */
+body {
+  /* O caminho exato da sua imagem agora está correto: */
+  background-image: url('assets/background_front.png');
+  background-color: #1a1a1a; 
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: #dddddd; 
+  padding: 20px;
+  line-height: 1.6;
 }
 
-/* Botão voltar para usar nas subpáginas */
-.botao-voltar {
-  display: inline-block;
-  margin-top: 10px;
-  margin-bottom: 20px;
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+/* Links em geral */
+a {
   color: #e6b800;
   text-decoration: none;
   font-weight: bold;
-  font-size: 0.9rem;
 }
-.botao-voltar:hover {
+
+a:hover {
   text-decoration: underline;
+}
+
+/* Títulos Universais */
+h1, h2 {
+  color: #e6b800; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  margin-bottom: 15px;
+}
+
+h3 {
+  color: #ffffff;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+/* Títulos Específicos */
+.titulo-principal {
+  text-align: center;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+
+.subtitulo {
+  font-style: italic;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #cccccc;
+  margin-bottom: 40px;
+}
+
+.secao-titulo {
+  font-size: 1.5rem;
+  border-bottom: 1px solid rgba(230, 184, 0, 0.3);
+  padding-bottom: 5px;
+}
+
+/* Fundo escuro para textos longos ficarem legíveis por cima da imagem */
+p {
+  background: rgba(10, 10, 10, 0.7);
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+/* Cards dos Modos */
+.card-modo {
+  background: rgba(20, 20, 20, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.card-modo p {
+  background: none; 
+  padding: 0;
+}
+
+/* Botões e Inputs */
+.secao-iniciar {
+  background: rgba(20, 20, 20, 0.9);
+  border: 2px solid #e6b800;
+  border-radius: 8px;
+  padding: 25px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.input-codigo {
+  width: 100%;
+  padding: 12px;
+  background: #111111;
+  border: 1px solid #444444;
+  color: #ffffff;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.botao-enviar {
+  width: 100%;
+  padding: 14px;
+  background: #e6b800;
+  color: #000000;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-transform: uppercase;
 }
