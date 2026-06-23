@@ -1,19 +1,24 @@
-/* Configurações Gerais e Fundo Fixo */
+/* Importando fontes investigativas/antigas do Google */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
 }
 
 body {
-  /* O caminho exato da sua imagem agora está correto: */
+  /* Fundo da imagem */
   background-image: url('assets/background_front.png');
-  background-color: #1a1a1a; 
+  background-color: #111; 
   background-attachment: fixed;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  
+  /* Fonte padrão para os textos (Estilo livro antigo) */
+  font-family: 'Crimson Text', serif;
+  font-size: 1.15rem;
   color: #dddddd; 
   padding: 20px;
   line-height: 1.6;
@@ -25,94 +30,95 @@ body {
   padding-bottom: 40px;
 }
 
-/* Links em geral */
-a {
-  color: #e6b800;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Títulos Universais */
-h1, h2 {
-  color: #e6b800; 
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+/* Títulos com fonte elegante de mistério */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #d4af37; /* Dourado envelhecido */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
   margin-bottom: 15px;
 }
 
-h3 {
-  color: #ffffff;
-  margin-top: 15px;
-  margin-bottom: 5px;
-}
-
-/* Títulos Específicos */
 .titulo-principal {
   text-align: center;
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
+  letter-spacing: 3px;
   margin-top: 20px;
-  letter-spacing: 2px;
 }
 
 .subtitulo {
   font-style: italic;
   text-align: center;
-  font-size: 1.1rem;
-  color: #cccccc;
-  margin-bottom: 40px;
+  color: #bbbbbb;
+  margin-bottom: 30px;
 }
 
 .secao-titulo {
-  font-size: 1.5rem;
-  border-bottom: 1px solid rgba(230, 184, 0, 0.3);
+  font-size: 1.8rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
   padding-bottom: 5px;
 }
 
-/* Fundo escuro para textos longos ficarem legíveis por cima da imagem */
+/* Fundo para leitura dos textos */
 p {
-  background: rgba(10, 10, 10, 0.7);
-  padding: 10px;
-  border-radius: 5px;
+  background: rgba(15, 15, 15, 0.85);
+  padding: 12px;
+  border-radius: 4px;
   margin-bottom: 15px;
+  border: 1px solid rgba(255,255,255,0.05);
 }
 
-/* Cards dos Modos */
-.card-modo {
-  background: rgba(20, 20, 20, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-}
-
-.card-modo p {
-  background: none; 
-  padding: 0;
-}
-
-/* Botões e Inputs */
-.secao-iniciar {
+/* Links que parecem botões nos Casos Disponíveis */
+.link-caso {
+  display: block;
   background: rgba(20, 20, 20, 0.9);
-  border: 2px solid #e6b800;
-  border-radius: 8px;
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 15px;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.link-caso:hover {
+  background: rgba(40, 40, 40, 0.9);
+  border-color: #d4af37;
+}
+
+.link-caso h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
+}
+
+.link-caso p {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-bottom: 0;
+  font-size: 1.05rem;
+  color: #cccccc;
+}
+
+/* --- Área de Iniciar Investigação (Só aparece no caso específico) --- */
+.secao-iniciar {
+  background: rgba(10, 10, 10, 0.95);
+  border: 2px solid #d4af37;
+  border-radius: 5px;
   padding: 25px;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 30px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.8);
 }
 
 .input-codigo {
   width: 100%;
   padding: 12px;
-  background: #111111;
-  border: 1px solid #444444;
-  color: #ffffff;
-  border-radius: 4px;
-  font-size: 1.1rem;
+  background: #222;
+  border: 1px solid #555;
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
   text-align: center;
   margin-bottom: 15px;
   text-transform: uppercase;
@@ -120,13 +126,33 @@ p {
 
 .botao-enviar {
   width: 100%;
-  padding: 14px;
-  background: #e6b800;
-  color: #000000;
+  padding: 15px;
+  background: #d4af37;
+  color: #111;
   border: none;
-  border-radius: 4px;
+  font-family: 'Playfair Display', serif;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   cursor: pointer;
   text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Botão de Voltar */
+.botao-voltar {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  margin-top: 30px;
+  color: #bbbbbb;
+  text-decoration: none;
+  border: 1px solid #555;
+  background: rgba(0, 0, 0, 0.6);
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+}
+
+.botao-voltar:hover {
+  background: rgba(50, 50, 50, 0.6);
+  color: #fff;
 }
