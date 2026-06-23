@@ -15,49 +15,28 @@
 
     <h2 class="secao-titulo">Formatos de Investigação</h2>
 
-    <div class="card-modo">
-      <h3>📋 Modo Casual (Estilo Mordoku)</h3>
-      <p>Sem tempo ou pressão. Use sua prancheta e o mapa impresso para caminhar pelos pontos históricos no seu ritmo, solucionando o tabuleiro lógico.</p>
-    </div>
+    <a href="casual.html" class="card-link">
+      <div class="card-modo">
+        <h3>📋 Modo Casual (Estilo Mordoku)</h3>
+        <p>Sem tempo ou pressão. Use sua prancheta e o mapa impresso para caminhar pelos pontos históricos no seu ritmo, solucionando o tabuleiro lógico.</p>
+      </div>
+    </a>
 
-    <div class="card-modo">
-      <h3>🎲 Modo Competitivo (Trilha Humana)</h3>
-      <p>Perfeito para jogar em grupo. As ruas de Paranapiacaba se transformam em um tabuleiro vivo onde cada acerto te faz avançar casas e erros geram punições.</p>
-    </div>
+    <a href="competitivo.html" class="card-link">
+      <div class="card-modo">
+        <h3>🎲 Modo Competitivo (Trilha Humana)</h3>
+        <p>Perfeito para jogar em grupo. As ruas de Paranapiacaba se transformam em um tabuleiro vivo onde cada acerto te faz avançar casas e erros geram punições.</p>
+      </div>
+    </a>
 
-    <div class="card-modo">
-      <h3>⏱️ Modo Detetive (Contra o Relógio)</h3>
-      <p>Raciocínio pesado contra o relógio. Vasculhe detalhes da arquitetura e colha pistas. Se o tempo acabar, o caso será fechado como insolúvel.</p>
-    </div>
-
-    <div class="secao-iniciar">
-      <h2 class="secao-titulo" style="border: none; margin-bottom: 10px;">Acessar Sistema</h2>
-      
-      <input type="text" id="codigoAcesso" class="input-codigo" placeholder="Digite seu código de acesso" value="TESTE">
-      
-      <button class="botao-enviar" onclick="verificarCodigo()">Iniciar Investigação</button>
-      
-      <p id="mensagemStatus" class="mensagem-erro">Código não encontrado ou aguardando compensação do Pix.</p>
-    </div>
+    <a href="detetive.html" class="card-link">
+      <div class="card-modo">
+        <h3>⏱️ Modo Detetive (Contra o Relógio)</h3>
+        <p>Raciocínio pesado contra o relógio. Vasculhe detalhes da arquitetura e colha pistas. Se o tempo acabar, o caso será fechado como insolúvel.</p>
+      </div>
+    </a>
 
   </div>
-
-  <script>
-    function verificarCodigo() {
-      const codigo = document.getElementById('codigoAcesso').value.trim().toUpperCase();
-      const status = document.getElementById('mensagemStatus');
-      
-      if (codigo === 'TESTE') {
-        status.style.color = '#4df0ff';
-        status.innerText = 'Acesso liberado! Iniciando caso...';
-        // Aqui futuramente você redireciona para a página do jogo, ex:
-        // window.location.href = 'mordoku.html';
-      } else {
-        status.style.color = '#ff4d4d';
-        status.innerText = 'Código inválido ou aguardando compensação do Pix.';
-      }
-    }
-  </script>
 
 </body>
 </html>
