@@ -1,244 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mistérios da Névoa - Paranapiacaba</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --bg-principal: #121212;
-            --bg-card: rgba(28, 28, 28, 0.85); /* Leve transparência para dar elegância */
-            --cor-destaque: #d4af37; 
-            --cor-texto: #e0e0e0;
-            --cor-subtexto: #a0a0a0;
-            --cor-borda: #333333;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background-color: var(--bg-principal);
-            color: var(--cor-texto);
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-        }
-
-        /* CONTAINER SEGURO PARA CELULAR */
-        .container {
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* 1. INTRODUÇÃO (SEÇÃO SUPERIOR) */
-        .intro-section {
-            text-align: center;
-            padding: 40px 10px 20px 10px;
-        }
-
-        .intro-section h1 {
-            font-family: 'Playfair Display', serif;
-            color: var(--cor-destaque);
-            font-size: 2.3rem;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .intro-section p {
-            font-size: 1.1rem;
-            color: var(--cor-texto);
-            font-style: italic;
-            font-weight: 300;
-        }
-
-        .titulo-secao {
-            font-family: 'Playfair Display', serif;
-            color: var(--cor-destaque);
-            font-size: 1.6rem;
-            margin: 30px 0 20px 0;
-            border-bottom: 1px solid var(--cor-borda);
-            padding-bottom: 5px;
-            text-align: center;
-        }
-
-        /* 2. CARDS DOS FORMATOS DE JOGO */
-        .card-formato {
-            background-color: var(--bg-card);
-            border: 1px solid var(--cor-borda);
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            backdrop-filter: blur(5px); /* Suaviza o fundo se sobrepor algo */
-        }
-
-        .card-formato h4 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.25rem;
-            color: #fff;
-            margin-bottom: 8px;
-        }
-
-        .card-formato p {
-            font-size: 0.95rem;
-            color: var(--cor-subtexto);
-        }
-
-        /* 3. QUADRO DE INVESTIGAÇÃO FICTÍCIO (FUNDO EXCLUSIVO NO FINAL) */
-        .secao-investigacao {
-            width: 100%;
-            max-width: 500px;
-            margin: 40px auto 0 auto;
-            /* APONTA DIRETO PARA A SUA NOVA IMAGEM SALVA */
-            background: url('Background_front.png') center/cover no-repeat;
-            border-radius: 12px;
-            border: 3px solid #2a1a0a; /* Moldura simulando madeira escura */
-            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
-            overflow: hidden;
-        }
-
-        /* Máscara escura interna para dar leitura ao botão e inputs */
-        .filtro-quadro {
-            background-color: rgba(0, 0, 0, 0.4); 
-            padding: 60px 25px; /* Espaçamento para o botão ficar bem centralizado no quadro */
-            text-align: center;
-            min-height: 500px; /* Garante que o quadro apareça bem */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* CAIXA DO FORMULÁRIO SOBRE O QUADRO */
-        .conteudo-formulario {
-            background-color: rgba(18, 18, 18, 0.9); /* Caixa preta semi-transparente para dar contraste */
-            padding: 25px;
-            border-radius: 8px;
-            border: 1px solid var(--cor-destaque);
-            width: 100%;
-            max-width: 360px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.6);
-        }
-
-        .conteudo-formulario h3 {
-            font-family: 'Playfair Display', serif;
-            color: var(--cor-destaque);
-            margin-bottom: 15px;
-            font-size: 1.4rem;
-        }
-
-        .input-codigo {
-            width: 100%;
-            padding: 12px;
-            background-color: #121212;
-            border: 1px solid var(--cor-borda);
-            color: #fff;
-            font-size: 1.1rem;
-            border-radius: 4px;
-            text-align: center;
-            text-transform: uppercase;
-            margin-bottom: 15px;
-            letter-spacing: 2px;
-        }
-
-        .input-codigo:focus {
-            outline: none;
-            border-color: var(--cor-destaque);
-        }
-
-        .btn-jogar {
-            width: 100%;
-            padding: 14px;
-            background-color: var(--cor-destaque);
-            color: #000;
-            border: none;
-            font-size: 1.1rem;
-            font-weight: bold;
-            border-radius: 4px;
-            cursor: pointer;
-            text-transform: uppercase;
-            transition: background 0.3s;
-        }
-
-        .btn-jogar:hover {
-            background-color: #bfa030;
-        }
-
-        .mensagem-erro {
-            color: #ff4d4d;
-            font-size: 0.9rem;
-            margin-top: 10px;
-            display: none;
-            font-weight: bold;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mistérios da Névoa - Paranapiacaba</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        
-        <header class="intro-section">
-            <h1>Mistérios da Névoa</h1>
-            <p>“A vila ferroviária esconde segredos que os antigos engenheiros ingleses tentaram enterrar nas brumas do tempo...”</p>
-        </header>
+  <div class="container">
+    
+    <h1 class="titulo-principal">Mistérios da Névoa</h1>
+    <p class="subtitulo">"A vila ferroviária esconde segredos que os antigos engenheiros ingleses tentaram enterrar nas brumas do tempo..."</p>
 
-        <section>
-            <h2 class="titulo-secao">Formatos de Investigação</h2>
-            
-            <div class="card-formato">
-                <h4>📋 Modo Casual (Estilo Mordoku)</h4>
-                <p>Sem tempo ou pressão. Use sua prancheta e o mapa impresso para caminhar pelos pontos históricos no seu ritmo, solucionando o tabuleiro lógico.</p>
-            </div>
+    <h2 class="secao-titulo">Formatos de Investigação</h2>
 
-            <div class="card-formato">
-                <h4>🎲 Modo Competitivo (Trilha Humana)</h4>
-                <p>Perfeito para jogar em grupo. As ruas de Paranapiacaba viram um tabuleiro vivo. Avance decifrando charadas, mas cuidado para não cair em armadilhas.</p>
-            </div>
-
-            <div class="card-formato">
-                <h4>⏳ Modo Hardcore (Estilo Detetive)</h4>
-                <p>Raciocínio pesado contra o relógio. Vasculhe detalhes da arquitetura e colha pistas. Se o tempo acabar, o caso será fechado como insolúvel.</p>
-            </div>
-        </section>
-
-        <h2 class="titulo-secao">Iniciar Caso</h2>
+    <div class="card-modo">
+      <h3>📋 Modo Casual (Estilo Mordoku)</h3>
+      <p>Sem tempo ou pressão. Use sua prancheta e o mapa impresso para caminhar pelos pontos históricos no seu ritmo, solucionando o tabuleiro lógico.</p>
     </div>
 
-    <section class="secao-investigacao">
-        <div class="filtro-quadro">
-            
-            <div class="conteudo-formulario">
-                <h3>Acessar Sistema</h3>
-                <input type="text" id="codigoAcesso" class="input-codigo" placeholder="Digite seu código" maxlength="8">
-                <button class="btn-jogar" onclick="validarCodigo()">Iniciar Investigação</button>
-                <div id="erroMsg" class="mensagem-erro">Código não encontrado ou aguardando compensação do Pix.</div>
-            </div>
-            
-        </div>
-    </section>
+    <div class="card-modo">
+      <h3>🎲 Modo Competitivo (Trilha Humana)</h3>
+      <p>Perfeito para jogar em grupo. As ruas de Paranapiacaba se transformam em um tabuleiro vivo onde cada acerto te faz avançar casas e erros geram punições.</p>
+    </div>
 
-    <script>
-        function validarCodigo() {
-            const codigo = document.getElementById('codigoAcesso').value.trim().toUpperCase();
-            const erroMsg = document.getElementById('erroMsg');
+    <div class="card-modo">
+      <h3>⏱️ Modo Detetive (Contra o Relógio)</h3>
+      <p>Raciocínio pesado contra o relógio. Vasculhe detalhes da arquitetura e colha pistas. Se o tempo acabar, o caso será fechado como insolúvel.</p>
+    </div>
 
-            // Use estes códigos no dia 13 para liberar a simulação
-            if (codigo === 'NEVOA123' || codigo === 'TESTE123') {
-                erroMsg.style.display = 'none';
-                alert('Código verificado! Conectando com os satélites de GPS de Paranapiacaba...');
-                // Futuramente redirecionará para a página do jogo:
-                // window.location.href = 'mordoku.html';
-            } else {
-                erroMsg.style.display = 'block';
-            }
-        }
-    </script>
+    <div class="secao-iniciar">
+      <h2 class="secao-titulo" style="border: none; margin-bottom: 10px;">Acessar Sistema</h2>
+      
+      <input type="text" id="codigoAcesso" class="input-codigo" placeholder="Digite seu código de acesso" value="TESTE">
+      
+      <button class="botao-enviar" onclick="verificarCodigo()">Iniciar Investigação</button>
+      
+      <p id="mensagemStatus" class="mensagem-erro">Código não encontrado ou aguardando compensação do Pix.</p>
+    </div>
+
+  </div>
+
+  <script>
+    function verificarCodigo() {
+      const codigo = document.getElementById('codigoAcesso').value.trim().toUpperCase();
+      const status = document.getElementById('mensagemStatus');
+      
+      if (codigo === 'TESTE') {
+        status.style.color = '#4df0ff';
+        status.innerText = 'Acesso liberado! Iniciando caso...';
+        // Aqui futuramente você redireciona para a página do jogo, ex:
+        // window.location.href = 'mordoku.html';
+      } else {
+        status.style.color = '#ff4d4d';
+        status.innerText = 'Código inválido ou aguardando compensação do Pix.';
+      }
+    }
+  </script>
+
 </body>
 </html>
